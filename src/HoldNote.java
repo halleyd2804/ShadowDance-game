@@ -1,47 +1,21 @@
 import bagel.*;
+import bagel.util.Point;
 
 /**
  * Class for hold notes
  */
 public class HoldNote extends Note {
+
     private static final int HEIGHT_OFFSET = 82;
-    private int y = 24;
     private boolean holdStarted = false;
-    public HoldNote(String dir, int appearanceFrame) {
-        super(new Image("res/holdNote" + dir + ".png"), appearanceFrame, 24,  false,false);
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void deactivate() {
-        active = false;
-        completed = true;
+    public HoldNote(String dir, int appearanceFrame, int x) {
+        super(new Image("res/holdNote" + dir + ".png"), appearanceFrame, 24,x, false,false);
     }
 
     public void startHold() {
         holdStarted = true;
     }
 
-    public void update() {
-        if (active) {
-            y += speed;
-        }
-
-        if (ShadowDance.getCurrFrame() >= appearanceFrame && !completed) {
-            active = true;
-        }
-    }
-
-    public void draw(int x) {
-        if (active) {
-            image.draw(x, y);
-        }
-    }
 
     /**
      * scored twice, once at the start of the hold and once at the end
@@ -87,4 +61,6 @@ public class HoldNote extends Note {
     private int getTopHeight() {
         return y - HEIGHT_OFFSET;
     }
+
 }
+

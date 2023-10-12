@@ -1,9 +1,12 @@
 import bagel.*;
 
+import java.util.ArrayList;
+
 /**
  * Class for dealing with accuracy of pressing the notes
  */
 public class Accuracy {
+    public static final int SPECIAL_SCORE = 15;
     public static final int PERFECT_SCORE = 10;
     public static final int GOOD_SCORE = 5;
     public static final int BAD_SCORE = -1;
@@ -21,6 +24,8 @@ public class Accuracy {
     private static final int RENDER_FRAMES = 30;
     private String currAccuracy = null;
     private int frameCount = 0;
+    private int multiplier = 1;
+    private final ArrayList<Integer> doubleScoreEffects = new ArrayList<Integer>();
 
     public void setAccuracy(String accuracy) {
         currAccuracy = accuracy;
@@ -33,25 +38,35 @@ public class Accuracy {
         if (triggered) {
             if (distance <= PERFECT_RADIUS) {
                 setAccuracy(PERFECT);
-                return PERFECT_SCORE;
+                return PERFECT_SCORE*multiplier;
             } else if (distance <= GOOD_RADIUS) {
                 setAccuracy(GOOD);
-                return GOOD_SCORE;
+                return GOOD_SCORE*multiplier;
             } else if (distance <= BAD_RADIUS) {
                 setAccuracy(BAD);
-                return BAD_SCORE;
+                return BAD_SCORE*multiplier;
             } else if (distance <= MISS_RADIUS) {
                 setAccuracy(MISS);
-                return MISS_SCORE;
+                return MISS_SCORE*multiplier;
             }
 
         } else if (height >= (Window.getHeight())) {
             setAccuracy(MISS);
-            return MISS_SCORE;
+            return MISS_SCORE*multiplier;
         }
 
         return NOT_SCORED;
 
+    }
+
+    public int checkScoreSpecial(int height, int targetHeight, boolean triggered){
+        int distance = Math.abs(height - targetHeight);
+        if(triggered){
+            if(distance <= GOOD_RADIUS){
+                return SPECIAL_SCORE;
+            }
+        }
+        return NOT_SCORED;
     }
 
     public void update() {
@@ -61,5 +76,21 @@ public class Accuracy {
                     Window.getWidth()/2 - ACCURACY_FONT.getWidth(currAccuracy)/2,
                     Window.getHeight()/2);
         }
+        for(int i = 0; i < doubleScoreEffects.size(); i++){
+           if(doubleScoreEffects.get(i) == 0) {
+                multiplier /= 2;
+            }
+            doubleScoreEffects.set(i, doubleScoreEffects.get(i)-1);
+
+        }
+    }
+    public void setMessage(String message){
+        currAccuracy = message;
+        frameCount = 0;
+    }
+
+    public void addDoubleScoreEffect() {
+        doubleScoreEffects.add(480);
+        multiplier *= 2;
     }
 }

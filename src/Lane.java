@@ -1,5 +1,7 @@
 import bagel.*;
 
+import java.util.ArrayList;
+
 /**
  * Class for the lanes which notes fall down
  */
@@ -8,14 +10,13 @@ public class Lane {
     private static final int TARGET_HEIGHT = 657;
     private final String type;
     private final Image image;
-    private final NormalNote[] notes = new NormalNote[100];
-    private int numNotes = 0;
-    private final HoldNote[] holdNotes = new HoldNote[20];
-    private int numHoldNotes = 0;
+    private final ArrayList<Note> notes = new ArrayList<>();
     private Keys relevantKey;
     private final int location;
     private int currNote = 0;
-    private int currHoldNote = 0;
+    public int getLocation(){
+        return location;
+    }
 
     public Lane(String dir, int location) {
         this.type = dir;
@@ -34,6 +35,9 @@ public class Lane {
             case "Down":
                 relevantKey = Keys.DOWN;
                 break;
+            case "Special":
+                relevantKey = Keys.SPACE;
+                break;
         }
     }
 
@@ -47,57 +51,36 @@ public class Lane {
     public int update(Input input, Accuracy accuracy) {
         draw();
 
-        for (int i = currNote; i < numNotes; i++) {
-            notes[i].update();
+
+        for (Note note : notes) {
+            note.update();
         }
 
-        for (int j = currHoldNote; j < numHoldNotes; j++) {
-            holdNotes[j].update();
-        }
-
-        if (currNote < numNotes) {
-            int score = notes[currNote].checkScore(input, accuracy, TARGET_HEIGHT, relevantKey);
-            if (notes[currNote].isCompleted()) {
+        if (currNote < notes.size()) {
+            int score = notes.get(currNote).checkScore(input, accuracy, TARGET_HEIGHT, relevantKey);
+            if (notes.get(currNote).isCompleted()) {
                 currNote++;
                 return score;
             }
         }
 
-        if (currHoldNote < numHoldNotes) {
-            int score = holdNotes[currHoldNote].checkScore(input, accuracy, TARGET_HEIGHT, relevantKey);
-            if (holdNotes[currHoldNote].isCompleted()) {
-                currHoldNote++;
-            }
-            return score;
-        }
-
         return Accuracy.NOT_SCORED;
     }
 
-    public void addNote(NormalNote n) {
-        notes[numNotes++] = n;
+    public void addNote(Note n) {
+        notes.add(n);
     }
 
-    public void addHoldNote(HoldNote hn) {
-        holdNotes[numHoldNotes++] = hn;
-    }
 
     /**
      * Finished when all the notes have been pressed or missed
      */
     public boolean isFinished() {
-        for (int i = 0; i < numNotes; i++) {
-            if (!notes[i].isCompleted()) {
+        for (int i = 0; i < notes.size(); i++) {
+            if (!notes.get(i).isCompleted()) {
                 return false;
             }
         }
-
-        for (int j = 0; j < numHoldNotes; j++) {
-            if (!holdNotes[j].isCompleted()) {
-                return false;
-            }
-        }
-
         return true;
     }
 
@@ -107,12 +90,8 @@ public class Lane {
     public void draw() {
         image.draw(location, HEIGHT);
 
-        for (int i = currNote; i < numNotes; i++) {
-            notes[i].draw(location);
-        }
-
-        for (int j = currHoldNote; j < numHoldNotes; j++) {
-            holdNotes[j].draw(location);
+        for (int i = currNote; i < notes.size(); i++) {
+            notes.get(i).draw(location);
         }
     }
 

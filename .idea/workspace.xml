@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc621a92-9001-4b31-9330-cd1be824f7da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/level1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/res/level1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/resources.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/resources.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NormalNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalNote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShadowDance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShadowDance.java" afterDir="false" />
-    </list>
+    <list default="true" id="4967f7f9-8eef-41e9-acdf-bbe5f8f6f244" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,37 +13,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/thihongminhd-project-2" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2VxcMToSDX2jG2SG2FKpN3rbEJD" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2WLGXyZsxQcHYEJb6pdPkWpC6Cj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/thihongminhd-project-2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Intel/ShadowDance/res&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,26 +44,64 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Intel\ShadowDance\res" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ShadowDance" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ShadowDance" />
+      <module name="bagel" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ShadowDance" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ShadowDance" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cc621a92-9001-4b31-9330-cd1be824f7da" name="Changes" comment="" />
-      <created>1695781125995</created>
+      <changelist id="4967f7f9-8eef-41e9-acdf-bbe5f8f6f244" name="Changes" comment="" />
+      <created>1696504490783</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695781125995</updated>
-      <workItem from="1695781128363" duration="3275000" />
-      <workItem from="1696211699679" duration="86000" />
-      <workItem from="1696211827236" duration="420000" />
-      <workItem from="1696212332866" duration="33000" />
-      <workItem from="1696212381431" duration="1139000" />
+      <updated>1696504490783</updated>
+      <workItem from="1696504491876" duration="2509000" />
+      <workItem from="1696544198920" duration="27000" />
+      <workItem from="1696835756220" duration="7863000" />
+      <workItem from="1696929130418" duration="4270000" />
+      <workItem from="1696984399298" duration="19599000" />
+      <workItem from="1697068586909" duration="525000" />
+      <workItem from="1697069765529" duration="222000" />
+      <workItem from="1697070002645" duration="608000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

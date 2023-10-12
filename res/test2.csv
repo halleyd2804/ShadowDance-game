@@ -11,12 +11,12 @@ Left,Normal,700
 Right,Bomb,800
 Right,Normal,900
 Right,Hold,1000
-Special,SpeedUp,1200
+Special,DoubleScore,1200
 Down,Hold,1300
 Left,Normal,1500
 Left,Normal,1600
 Right,Normal,1800
-Special,SlowDown,1900
+Special,DoubleScore,1900
 Down,Normal,2000
 Down,Hold,2100
 Right,Normal,2300
