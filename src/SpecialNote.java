@@ -13,17 +13,21 @@ public abstract class SpecialNote extends Note{
         return type;
     }
     public abstract void setEffect();
+    // Update the score when a special note is pressed and set effect for them
     @Override
     public int checkScore(Input input, Accuracy accuracy, int targetHeight, Keys relevantKey) {
+        int score = accuracy.checkScoreSpecial(this.y, targetHeight, input.wasPressed(relevantKey));
         if (isActive()) {
-            int score = accuracy.checkScoreSpecial(this.y, targetHeight, input.wasPressed(relevantKey));
             if (score != Accuracy.NOT_SCORED) {
                 accuracy.setMessage(type);
                 setEffect();
                 deactivate();
                 return score;
             }
-
+        } else {
+            if (score == Accuracy.MISS_SCORE){
+                deactivate();
+            }
         }
 
         return 0;

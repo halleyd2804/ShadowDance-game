@@ -8,6 +8,7 @@ public class SpeedUpNote extends SpecialNote{
         super(new Image("res/note" + dir + ".png"), appearanceFrame, 100, x, false,false, "Speed Up");
     }
 
+    // Set effect for speed up note
     public void setEffect(){
         Note.setNewSpeed(2);
     }

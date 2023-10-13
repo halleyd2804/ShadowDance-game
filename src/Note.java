@@ -9,9 +9,11 @@ public abstract class Note implements Collidable {
     protected static int speed = 2;
     protected int y;
     protected int x;
-    protected boolean active = true;
+    public boolean active = true;
+    private final int COLLISION_DISTANCE_NOTE = 104;
     protected boolean completed = false;
 
+    // Constructor for the Note class
     public Note(Image image, int appearanceFrame, int y, int x, boolean active, boolean completed) {
         this.image = image;
         this.appearanceFrame = appearanceFrame;
@@ -20,32 +22,41 @@ public abstract class Note implements Collidable {
         this.active = active;
         this.completed = completed;
     }
+
+    // Check if the note is active
     public boolean isActive() {
         return active;
     }
-    public boolean isCompleted() {return completed;}
 
+    // Check if the note is completed
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    // Deactivate the note
     public void deactivate() {
         active = false;
         completed = true;
     }
 
+    // Update the note's position
     public void update() {
         if (active) {
             y += speed;
         }
 
+        // Activate the note when the current frame matches the appearance frame
         if (ShadowDance.getCurrFrame() >= appearanceFrame && !completed) {
             active = true;
         }
-
     }
 
+    // Draw the note on the screen
     public void draw(int x) {
         Guardian guardian = ShadowDance.getGuardian();
-        if(guardian != null){
+        if (guardian != null) {
             Enemy enemy = guardian.nearestEnemy();
-            if(enemy != null && collide(enemy.getPosition())){
+            if (enemy != null && collide(enemy.getPosition())) {
                 deactivate();
             }
         }
@@ -53,15 +64,19 @@ public abstract class Note implements Collidable {
             image.draw(x, y);
         }
     }
-    public static void setNewSpeed(int speedDelta){
+
+    // Increase or decrease the speed of all notes
+    public static void setNewSpeed(int speedDelta) {
         speed += speedDelta;
     }
+
+    // Abstract method to check the score based on player input and accuracy
     public abstract int checkScore(Input input, Accuracy accuracy, int targetHeight, Keys relevantKey);
 
-    public boolean collide(Point a){
-        Point position = new Point(x,y);
+    // Check if the note collides with an enemy (used for collision detection)
+    public boolean collide(Point a) {
+        Point position = new Point(x, y);
         double distance = position.distanceTo(a);
-        if(distance <= 62) return true;
-        return false;
+        return distance <= COLLISION_DISTANCE_NOTE;
     }
 }

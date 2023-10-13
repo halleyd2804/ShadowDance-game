@@ -67,6 +67,7 @@ public class Lane {
         return Accuracy.NOT_SCORED;
     }
 
+    //Add notes into ArrayList<Note>
     public void addNote(Note n) {
         notes.add(n);
     }
@@ -76,12 +77,25 @@ public class Lane {
      * Finished when all the notes have been pressed or missed
      */
     public boolean isFinished() {
-        for (int i = 0; i < notes.size(); i++) {
-            if (!notes.get(i).isCompleted()) {
+        for (Note note : notes) {
+            if (!note.isCompleted()) {
                 return false;
             }
         }
         return true;
+    }
+
+    // clear notes arraylist
+    public void clearNotes(){
+        notes.clear();
+    }
+
+    public void clearLane(){
+        for(Note note : notes){
+            if(note.active && !note.isCompleted()){
+                note.deactivate();
+            }
+        }
     }
 
     /**

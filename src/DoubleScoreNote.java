@@ -5,6 +5,7 @@ public class DoubleScoreNote extends SpecialNote{
         super(new Image("res/note2x.png"), appearanceFrame, 100, location, false,false, "Double Score");
     }
 
+    // Set effect Double Score
     @Override
     public void setEffect() {
         Accuracy accuracy = ShadowDance.getAccuracy();
