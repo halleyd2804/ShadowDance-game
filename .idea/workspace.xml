@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4967f7f9-8eef-41e9-acdf-bbe5f8f6f244" name="Changes" comment="" />
+    <list default="true" id="4967f7f9-8eef-41e9-acdf-bbe5f8f6f244" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShadowDance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShadowDance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecialNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialNote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Accuracy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Accuracy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Arrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Arrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DoubleScoreNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DoubleScoreNote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Guardian.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Guardian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Note.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShadowDance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShadowDance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SlowDownNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SlowDownNote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpecialNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpecialNote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpeedUpNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpeedUpNote.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/thihongminhd-project-2" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -29,21 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Intel/ShadowDance/res&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Intel/ShadowDance/thihongminhd-project-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Intel\ShadowDance\res" />
@@ -87,6 +105,7 @@
       <workItem from="1697068586909" duration="525000" />
       <workItem from="1697069765529" duration="222000" />
       <workItem from="1697070002645" duration="608000" />
+      <workItem from="1697160922238" duration="819000" />
     </task>
     <servers />
   </component>

@@ -51,6 +51,7 @@ public abstract class Note implements Collidable {
         }
     }
 
+
     // Draw the note on the screen
     public void draw(int x) {
         Guardian guardian = ShadowDance.getGuardian();

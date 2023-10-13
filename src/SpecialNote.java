@@ -18,15 +18,15 @@ public abstract class SpecialNote extends Note{
     public int checkScore(Input input, Accuracy accuracy, int targetHeight, Keys relevantKey) {
         int score = accuracy.checkScoreSpecial(this.y, targetHeight, input.wasPressed(relevantKey));
         if (isActive()) {
-            if (score != Accuracy.NOT_SCORED) {
+            if (score != Accuracy.NOT_SCORED && score != Accuracy.MISS_SCORE) {
                 accuracy.setMessage(type);
                 setEffect();
                 deactivate();
                 return score;
-            }
-        } else {
-            if (score == Accuracy.MISS_SCORE){
-                deactivate();
+            } else {
+                if (score == Accuracy.MISS_SCORE){
+                    deactivate();
+                }
             }
         }
 

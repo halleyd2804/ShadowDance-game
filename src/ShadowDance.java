@@ -37,9 +37,6 @@ public class ShadowDance extends AbstractGame {
     private int numLanes = 0;
     private int score = 0;
     private static int currFrame = 0;
-    private Track track1 = new Track("res/track1.wav");
-    private Track track2 = new Track("res/track2.wav");
-    private Track track3 = new Track("res/track3.wav");
     private boolean started = false;
     private boolean finished = false;
     private static Guardian guardian;
@@ -135,6 +132,7 @@ public class ShadowDance extends AbstractGame {
         for (Lane lane : lanes) {
             lane.clearNotes();
         }
+        Note.speed = 2;
         lanes.clear();
         enemies.clear();
         score = 0;
@@ -148,6 +146,7 @@ public class ShadowDance extends AbstractGame {
 
         accuracy.update();
         finished = checkFinished();
+
     }
 
     /**
@@ -167,20 +166,17 @@ public class ShadowDance extends AbstractGame {
             accuracy = new Accuracy();
             readCsv("res/level1.csv");
             level = 1;
-            track1.start();
         }
         if (input.wasPressed(Keys.NUM_2)) {
             accuracy = new Accuracy();
             level = 2;
             readCsv("res/level2.csv");
-            track2.start();
         }
         if (input.wasPressed(Keys.NUM_3)) {
             accuracy = new Accuracy();
             level = 3;
             readCsv("res/level3.csv");
             guardian = new Guardian();
-            track3.start();
         }
 
         if (!started) {
@@ -195,10 +191,6 @@ public class ShadowDance extends AbstractGame {
         } else if (finished) {
             // end screen
             read = true;
-            if (level == 1) track1.pause();
-            if (level == 2) track2.pause();
-            if (level == 3) track3.pause();
-
             if ((score >= CLEAR_SCORE_LEVEL_1 && level == 1) || (score >= CLEAR_SCORE_LEVEL_2 && level == 2) ||
                     score >= CLEAR_SCORE_LEVEL_3 && level == 3) {
                 TITLE_FONT.drawString(CLEAR_MESSAGE,
