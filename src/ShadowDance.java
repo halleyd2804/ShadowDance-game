@@ -234,7 +234,6 @@ public class ShadowDance extends AbstractGame {
     // Check if the game is finished
     private boolean checkFinished() {
         for (Lane lane : lanes) {
-//            System.out.println(lane.);
             if (!lane.isFinished()) {
                 return false;
             }

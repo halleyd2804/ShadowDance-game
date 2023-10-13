@@ -4,15 +4,15 @@ import bagel.Keys;
 
 public abstract class SpecialNote extends Note{
     private String type;
-    private final int EFFECT_FRAME = 480;
+
     public SpecialNote(Image image, int appearanceFrame, int y, int x, boolean active, boolean completed, String type) {
-        super(image, appearanceFrame, y,x, active, completed);
+        super(image, appearanceFrame, y, x, active, completed);
         this.type = type;
     }
-    public String getType(){
-        return type;
-    }
+
+    // set effect for each special note
     public abstract void setEffect();
+
     // Update the score when a special note is pressed and set effect for them
     @Override
     public int checkScore(Input input, Accuracy accuracy, int targetHeight, Keys relevantKey) {
